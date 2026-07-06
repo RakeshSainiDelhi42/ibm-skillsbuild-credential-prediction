@@ -91,6 +91,29 @@ The original project uses IBM SkillsBuild learner transcript reports and digital
 
 The XGBoost model achieved the best overall performance while maintaining strong generalization and avoiding data leakage.
 
+
+### Feature Importance
+
+The figure below shows the relative importance of the features used by the XGBoost model.
+
+![Feature Importance](docs/images/feature_importance.png)
+
+---
+
+### ROC Curve
+
+The ROC Curve demonstrates the model's ability to distinguish between learners who earn digital credentials and those who do not.
+
+![ROC Curve](docs/images/roc_curve.png)
+
+---
+
+### Confusion Matrix
+
+The confusion matrix summarizes the classification performance of the best-performing model on the test dataset.
+
+![Confusion Matrix](docs/images/confusion_matrix.png)
+
 ---
 
 ## 📂 Repository Structure
