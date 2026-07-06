@@ -6,7 +6,8 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-Model-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-An end-to-end machine learning pipeline for predicting IBM SkillsBuild digital credential attainment and generating prioritized learner outreach recommendations for Learning Links Foundation.
+
+# An end-to-end machine learning pipeline for predicting IBM SkillsBuild digital credential attainment and generating prioritized learner outreach recommendations for Learning Links Foundation.
 
 ---
 
