@@ -193,7 +193,7 @@ The original IBM SkillsBuild datasets contain confidential information and are *
 **Rakesh Saini**
 
 M.Tech (Data Science & Engineering)  
-BITS Pilani (WILP)
+BITS Pilani
 
 
 ---
