@@ -17,6 +17,14 @@ Many learners register on the IBM SkillsBuild platform, but only a fraction comp
 
 This project develops an end-to-end machine learning pipeline that predicts whether a learner will earn an IBM Digital Credential and ranks learners based on their need for follow-up support.
 
+## ⭐ Project Highlights
+
+- Developed an end-to-end machine learning pipeline for predicting IBM SkillsBuild digital credential attainment.
+- Processed and analyzed **415,142+ learning records** from **46,073 unique learners**.
+- Engineered leakage-free features to ensure reliable and trustworthy model performance.
+- Compared multiple machine learning algorithms, with **XGBoost** achieving the best results.
+- Achieved an **F1-score of 89.2%** and **ROC-AUC of ~0.98**.
+- Generated an automated **priority outreach list** to help trainers identify learners requiring timely intervention.
 ---
 
 ## 🎯 Problem Statement
