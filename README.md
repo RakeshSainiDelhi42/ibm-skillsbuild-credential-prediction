@@ -76,7 +76,11 @@ The original project uses IBM SkillsBuild learner transcript reports and digital
 - Logistic Regression
 - Random Forest
 - XGBoost (Best Performing Model)
+### Model Comparison
 
+The figure below shows the model comparison between Logistic Regression, Random Forest and XGBoost.
+
+![Model Comparison](docs/images/model_comparison.png)
 ---
 
 ## 📈 Model Performance
@@ -104,7 +108,7 @@ The figure below shows the relative importance of the features used by the XGBoo
 
 The ROC Curve demonstrates the model's ability to distinguish between learners who earn digital credentials and those who do not.
 
-![ROC Curve](docs/images/roc_curve.png)
+![ROC Curves](docs/images/roc_curves.png)
 
 ---
 
@@ -112,7 +116,7 @@ The ROC Curve demonstrates the model's ability to distinguish between learners w
 
 The confusion matrix summarizes the classification performance of the best-performing model on the test dataset.
 
-![Confusion Matrix](docs/images/confusion_matrix.png)
+![Confusion Matrices](docs/images/confusion_matrices.png)
 
 ---
 
