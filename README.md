@@ -17,6 +17,61 @@ Many learners register on the IBM SkillsBuild platform, but only a fraction comp
 
 This project develops an end-to-end machine learning pipeline that predicts whether a learner will earn an IBM Digital Credential and ranks learners based on their need for follow-up support.
 
+## 🔄 Project Workflow
+
+```text
+                  IBM SkillsBuild Reports
+         (Learning Transcripts & Credentials)
+                              │
+                              ▼
+                  Data Cleaning & Validation
+        - Handle missing values
+        - Parse date formats
+        - Remove redundant columns
+                              │
+                              ▼
+                    Feature Engineering
+        - Time on Platform
+        - Last Activity Date
+        - Course Aggregation
+        - Leakage-free Feature Selection
+                              │
+                              ▼
+                     Data Preprocessing
+        - Aggregate to Learner Level
+        - Encode Categorical Features
+        - Median Imputation
+        - Train/Test Split
+        - SMOTE for Class Balancing
+                              │
+                              ▼
+                 Machine Learning Models
+        • Logistic Regression
+        • Random Forest
+        • XGBoost
+                              │
+                              ▼
+                    Model Evaluation
+        - Accuracy
+        - Precision
+        - Recall
+        - F1 Score
+        - ROC-AUC
+        - Cross Validation
+                              │
+                              ▼
+                Best Model Selection (XGBoost)
+                              │
+                              ▼
+                   Learner Probability Scoring
+                              │
+                              ▼
+            Prioritized Outreach Recommendation
+                              │
+                              ▼
+             High-Priority Learner List for LLF
+```
+
 ## ⭐ Project Highlights
 
 - Developed an end-to-end machine learning pipeline for predicting IBM SkillsBuild digital credential attainment.
