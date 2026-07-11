@@ -1,13 +1,5 @@
 """
 Step 5 - Scoring Pipeline
-=========================
-- Takes a learner dataset (cleaned format) as input
-- Builds the same features used in training
-- Loads the saved model and scores each learner
-- Outputs a priority list ranked by LOWEST credential probability
-  (learners least likely to earn a credential = need trainer outreach)
-
-Run monthly after cleaning new data.
 """
 
 import pandas as pd
@@ -20,14 +12,14 @@ from datetime import datetime
 
 warnings.filterwarnings('ignore')
 
-# ── CONFIG ──────────────────────────────────────────────────
+# ── CONFIG 
 # Score the full cleaned dataset (or point to a new month's cleaned files)
 CLEANED_FOLDER = 'data/cleaned/*.csv'
 MODEL_PATH     = 'models/best_model.pkl'
 ENCODERS_PATH  = 'models/encoders.pkl'
 FEATURES_PATH  = 'models/feature_names.pkl'
 OUTPUT_FOLDER  = 'output/priority_lists/'
-# ────────────────────────────────────────────────────────────
+
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 today    = datetime.today().strftime('%Y_%m_%d')
