@@ -1,19 +1,5 @@
 """
-═══════════════════════════════════════════════════════════════
   IBM SKILLSBUILD CREDENTIAL PREDICTION — FULL PIPELINE DEMO
-═══════════════════════════════════════════════════════════════
-  M.Tech Dissertation | Rakesh Saini | BITS Pilani WILP
-  Partner: Learning Links Foundation (LLF)
-
-  Runs the complete end-to-end pipeline in one command:
-    1. Clean & prepare raw data
-    2. Data analysis
-    3. Preprocessing & feature engineering
-    4. Model training & evaluation
-    5. Scoring & priority list generation
-
-  Usage:  python run_demo.py
-═══════════════════════════════════════════════════════════════
 """
 
 import subprocess
