@@ -1,12 +1,5 @@
 """
 Step 4 - Model Training & Selection
-=====================================
-- Loads learner-level data
-- Encodes features, stratified train/test split
-- Applies SMOTE for class imbalance
-- Trains & compares Logistic Regression, Random Forest, XGBoost
-- Evaluates with proper metrics + cross-validation
-- Saves charts and best model
 """
 
 import pandas as pd
@@ -36,11 +29,10 @@ except ImportError:
     HAS_XGB = False
     print("Note: XGBoost not installed. Run: pip install xgboost")
 
-# ── CONFIG ──────────────────────────────────────────────────
+# ── CONFIG 
 INPUT_FILE    = 'data/combined/learner_level_data.csv'
 MODEL_FOLDER  = 'models/'
 OUTPUT_FOLDER = 'output/model_results/'
-# ────────────────────────────────────────────────────────────
 
 os.makedirs(MODEL_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
