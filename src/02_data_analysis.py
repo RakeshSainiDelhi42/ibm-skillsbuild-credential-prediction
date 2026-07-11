@@ -1,9 +1,5 @@
 """
 Step 2 - Data Analysis on Cleaned Files
-========================================
-Runs on the 14 cleaned files + credential file.
-Confirms the final feature set for credential prediction.
-Run and share the output. No files are modified.
 """
 
 import pandas as pd
@@ -16,16 +12,16 @@ warnings.filterwarnings('ignore')
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 200)
 
-# ── CONFIG ──────────────────────────────────────────────────
+# ── CONFIG 
 CLEANED_FOLDER = 'data/cleaned/*.csv'
 CRED_FILE      = 'data/credentials/V3SkillsReportCredentialsDetail (4).csv'
-# ────────────────────────────────────────────────────────────
+
 
 print("="*70)
 print("  DATA ANALYSIS ON CLEANED FILES")
 print("="*70)
 
-# ── LOAD ──
+# ── LOAD 
 files = sorted(glob.glob(CLEANED_FOLDER))
 dfs = [pd.read_csv(f, low_memory=False) for f in files]
 trans = pd.concat(dfs, ignore_index=True)
@@ -36,10 +32,10 @@ print(f"\nLoaded {len(files)} cleaned files")
 print(f"Transcript: {len(trans):,} rows | {trans['Learner - ID'].nunique():,} learners")
 print(f"Columns: {trans.shape[1]}")
 
-# ── TARGET ──
+# ── TARGET 
 trans['earned'] = trans['Learner - ID'].isin(cred_learners).astype(int)
 
-# ═══ FILL RATES OF ALL REMAINING COLUMNS ═══
+#  FILL RATES OF ALL REMAINING COLUMNS 
 print("\n" + "="*70)
 print("  Column Fill Rates (cleaned files)")
 print("="*70)
@@ -49,7 +45,7 @@ for c in trans.columns:
     if c in ['snapshot_file','earned']: continue
     print(f"{c:40s} {trans[c].notna().mean()*100:6.1f}% {trans[c].nunique():>8,}")
 
-# ═══ BUILD LEARNER-LEVEL SUMMARY ═══
+#  BUILD LEARNER-LEVEL SUMMARY 
 print("\n" + "="*70)
 print("  Building Learner-Level Features")
 print("="*70)
@@ -86,7 +82,7 @@ for col in ['total_courses','time_on_platform','avg_pct']:
     print(f"  Earned:    mean {g.loc[1,'mean']:8.1f} | median {g.loc[1,'median']:8.1f}")
     print(f"  Not earned:mean {g.loc[0,'mean']:8.1f} | median {g.loc[0,'median']:8.1f}")
 
-# ═══ CATEGORICAL FEATURE SEPARATION ═══
+# CATEGORICAL FEATURE SEPARATION 
 print("\n" + "="*70)
 print("  Categorical Features — Credential Rate by Category")
 print("="*70)
@@ -99,7 +95,7 @@ for cat in ['learner_type','delivery_type','source','learning_source',
     r.columns = ['cred_rate_%','count']
     print(r.head(8).to_string())
 
-# ═══ MISSING VALUES AT LEARNER LEVEL ═══
+# MISSING VALUES AT LEARNER LEVEL
 print("\n" + "="*70)
 print("  Missing Values (learner level)")
 print("="*70)
