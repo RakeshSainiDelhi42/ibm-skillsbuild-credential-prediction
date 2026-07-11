@@ -1,10 +1,5 @@
 """
 Step 4b - Model Diagnostics (Honesty & Robustness Checks)
-==========================================================
-1. Full classification report (per-class precision/recall)
-2. Confusion matrix numbers
-3. Drop-delivery_type test — is the model one-feature-dependent?
-4. Each-feature-alone test — how much does each single feature predict?
 """
 
 import pandas as pd
