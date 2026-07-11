@@ -1,15 +1,5 @@
 """
 Step 1 - Clean & Prepare the 14 Transcript Files
-=================================================
-For each of the 14 raw files:
-- Adds 2 new columns:
-    * last_activity_date      = Learning Last Accessed Date if present,
-                                else Completion Date
-    * time_on_platform_days   = last_activity_date - User Registration Date
-- Drops columns that are definitely useless (constant / empty / redundant)
-- Keeps anything uncertain (we'll analyze those next)
-- Saves 14 cleaned files to data/cleaned/
-
 Raw files are never modified.
 """
 
@@ -21,10 +11,10 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-# ── CONFIG ──────────────────────────────────────────────────
+# ── CONFIG 
 RAW_FOLDER     = 'data/raw/*.csv'
 CLEANED_FOLDER = 'data/cleaned/'
-# ────────────────────────────────────────────────────────────
+
 
 os.makedirs(CLEANED_FOLDER, exist_ok=True)
 
@@ -52,10 +42,8 @@ DROP_COLS = [
     'Learner - Name',             # PII — not a feature (kept only if needed for output later)
 ]
 
-# ─────────────────────────────────────────────────────────────
-# PROCESS EACH FILE
-# ─────────────────────────────────────────────────────────────
 
+# PROCESS EACH FILE
 all_files = sorted(glob.glob(RAW_FOLDER))
 print(f"\nFound {len(all_files)} files\n")
 
