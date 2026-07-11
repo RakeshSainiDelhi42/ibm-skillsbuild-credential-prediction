@@ -1,11 +1,6 @@
 """
 Step 3 - Preprocessing & Feature Engineering
-=============================================
-- Loads 14 cleaned files + credential file
-- Aggregates to learner level
-- Builds 7 honest features + target
-- Handles missing values
-- Saves final dataset ready for model training
+
 """
 
 import pandas as pd
@@ -16,11 +11,11 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-# ── CONFIG ──────────────────────────────────────────────────
+# ── CONFIG 
 CLEANED_FOLDER = 'data/cleaned/*.csv'
 CRED_FILE      = 'data/credentials/V3SkillsReportCredentialsDetail (4).csv'
 OUTPUT_FILE    = 'data/combined/learner_level_data.csv'
-# ────────────────────────────────────────────────────────────
+
 
 os.makedirs('data/combined/', exist_ok=True)
 
@@ -28,7 +23,7 @@ print("="*60)
 print("  Step 3 — Preprocessing & Feature Engineering")
 print("="*60)
 
-# ── LOAD ──
+# ── LOAD 
 print("\n--- Loading cleaned files + credential file ---")
 files = sorted(glob.glob(CLEANED_FOLDER))
 dfs = [pd.read_csv(f, low_memory=False) for f in files]
@@ -37,11 +32,11 @@ cred = pd.read_csv(CRED_FILE, low_memory=False)
 cred_learners = set(cred['Learner - ID'])
 print(f"Transcript rows: {len(trans):,} | Learners: {trans['Learner - ID'].nunique():,}")
 
-# ── NUMERIC PREP ──
+# ── NUMERIC PREP 
 trans['time_on_platform_days'] = pd.to_numeric(
     trans['time_on_platform_days'], errors='coerce')
 
-# ── AGGREGATE TO LEARNER LEVEL ──
+# ── AGGREGATE TO LEARNER LEVEL 
 print("\n--- Aggregating to learner level ---")
 learner = trans.groupby('Learner - ID').agg(
     total_courses    = ('Learning activity - ID', 'nunique'),
@@ -72,7 +67,7 @@ for col in ['learner_type', 'learning_source', 'delivery_type', 'state', 'age']:
     learner[col] = learner[col].replace('Not Available', 'Unknown')
     learner[col] = learner[col].fillna('Unknown')
 
-# ── HANDLE MISSING NUMERIC ──
+# ── HANDLE MISSING NUMERIC 
 print("\n--- Handling missing numeric values ---")
 # time_on_platform: fill missing with median
 med = learner['time_on_platform'].median()
@@ -80,7 +75,7 @@ missing_time = learner['time_on_platform'].isna().sum()
 learner['time_on_platform'] = learner['time_on_platform'].fillna(med)
 print(f"  time_on_platform: filled {missing_time:,} missing with median ({med:.0f})")
 
-# ── MISSING CHECK ──
+# ── MISSING CHECK 
 print("\n--- Final missing values ---")
 miss = (learner.isnull().sum()/len(learner)*100).round(1)
 miss = miss[miss>0]
@@ -89,7 +84,7 @@ if len(miss)==0:
 else:
     print(miss.to_string())
 
-# ── SAVE ──
+# ── SAVE 
 learner.to_csv(OUTPUT_FILE, index=False)
 
 print(f"\n{'='*60}")
