@@ -1,23 +1,23 @@
 # PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT
-# Predicting IBM SkillsBuild Digital Credential Attainment
+
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Model-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
 
 # An end-to-end machine learning pipeline for predicting IBM SkillsBuild digital credential attainment and generating prioritized learner outreach recommendations for Learning Links Foundation.
 
 ---
 
-## 📖 Project Overview
+##  Project Overview
 
 Many learners register on the IBM SkillsBuild platform, but only a fraction complete enough learning activities to earn an IBM Digital Credential. Since trainers have limited time and resources, identifying learners who are least likely to achieve a credential enables targeted interventions and improves learner success.
 
 This project develops an end-to-end machine learning pipeline that predicts whether a learner will earn an IBM Digital Credential and ranks learners based on their need for follow-up support.
 
-## 🔄 Project Workflow
+##  Project Workflow
 
 ```text
                   IBM SkillsBuild Reports
@@ -72,7 +72,7 @@ This project develops an end-to-end machine learning pipeline that predicts whet
              High-Priority Learner List for LLF
 ```
 
-## ⭐ Project Highlights
+##  Project Highlights
 
 - Developed an end-to-end machine learning pipeline for predicting IBM SkillsBuild digital credential attainment.
 - Processed and analyzed **415,142+ learning records** from **46,073 unique learners**.
@@ -82,7 +82,7 @@ This project develops an end-to-end machine learning pipeline that predicts whet
 - Generated an automated **priority outreach list** to help trainers identify learners requiring timely intervention.
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Learning Links Foundation (LLF), an implementation partner of IBM SkillsBuild, registers thousands of learners every year. However, trainers currently have no data-driven method to identify learners who require additional support.
 
@@ -104,7 +104,7 @@ The objective of this project is to predict credential attainment using learner 
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Python
 - Pandas
@@ -119,7 +119,7 @@ The objective of this project is to predict credential attainment using learner 
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 The original project uses IBM SkillsBuild learner transcript reports and digital credential reports provided through Learning Links Foundation.
 
@@ -127,7 +127,7 @@ The original project uses IBM SkillsBuild learner transcript reports and digital
 
 ---
 
-## ⚙️ Machine Learning Pipeline
+##  Machine Learning Pipeline
 
 1. Data Cleaning
 2. Feature Engineering
@@ -142,7 +142,7 @@ The original project uses IBM SkillsBuild learner transcript reports and digital
 
 ---
 
-## 🤖 Models Compared
+##  Models Compared
 
 - Logistic Regression
 - Random Forest
@@ -154,7 +154,7 @@ The figure below shows the model comparison between Logistic Regression, Random 
 ![Model Comparison](docs/images/model_comparison.png)
 ---
 
-## 📈 Model Performance
+##  Model Performance
 
 | Metric | Score |
 |--------|--------|
@@ -191,7 +191,7 @@ The confusion matrix summarizes the classification performance of the best-perfo
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT/
@@ -208,7 +208,7 @@ PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT/
 
 ---
 
-## ▶️ Installation
+##  Installation
 
 Clone the repository
 
@@ -224,7 +224,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 - Streamlit web application
 - Docker containerization
@@ -235,7 +235,7 @@ pip install -r requirements.txt
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 This repository is intended for educational and portfolio purposes.
 
@@ -243,7 +243,7 @@ The original IBM SkillsBuild datasets contain confidential information and are *
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Rakesh Saini**
 
