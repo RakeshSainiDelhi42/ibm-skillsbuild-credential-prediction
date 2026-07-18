@@ -90,7 +90,7 @@ The objective of this project is to predict credential attainment using learner 
 
 ---
 
-## 🚀 Features
+##  Features
 
 - End-to-end machine learning pipeline
 - Data cleaning and preprocessing
@@ -194,7 +194,7 @@ The confusion matrix summarizes the classification performance of the best-perfo
 ##  Repository Structure
 
 ```
-PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT/
+ibm-skillsbuild-credential-prediction/
 
 ├── data/
 ├── models/
@@ -213,7 +213,7 @@ PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT/
 Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT.git
+git clone https://github.com/RakeshSainiDelhi42/ibm-skillsbuild-credential-prediction.git
 ```
 
 Install dependencies
@@ -221,17 +221,6 @@ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-##  Future Improvements
-
-- Streamlit web application
-- Docker containerization
-- Automated model retraining
-- Explainable AI using SHAP
-- Cloud deployment
-- CI/CD pipeline integration
 
 ---
 
@@ -254,6 +243,6 @@ https://www.linkedin.com/in/rakeshsaini2014/
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
