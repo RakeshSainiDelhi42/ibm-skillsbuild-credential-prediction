@@ -1,4 +1,4 @@
-# PREDICTING-IBM-SKILLSBUILD-DIGITAL-CREDENTIAL-ATTAINMENT
+# ibm-skillsbuild-credential-prediction
 
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
