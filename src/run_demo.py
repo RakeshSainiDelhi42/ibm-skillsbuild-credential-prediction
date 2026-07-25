@@ -17,7 +17,7 @@ STEPS = [
     ("05_scoring_pipeline.py",   "STEP 5 — Scoring & Priority List Generation"),
 ]
 
-NOTEBOOKS = "notebooks"
+SRC_FOLDER = "src"
 
 def banner(text, char="═"):
     line = char * 63
@@ -36,7 +36,7 @@ def main():
 
     for i, (script, title) in enumerate(STEPS, 1):
         banner(title)
-        path = os.path.join(NOTEBOOKS, script)
+        path = os.path.join(SRC_FOLDER, script)
 
         if not os.path.exists(path):
             print(f"  ⚠  Script not found: {path} — skipping")
@@ -65,8 +65,8 @@ def main():
     print("    • 14 cleaned data files       → data/cleaned/")
     print("    • Learner-level dataset        → data/combined/")
     print("    • Trained model (XGBoost)      → models/best_model.pkl")
-    print("    • Model charts (4)             → output/model_results/")
-    print("    • Priority list for trainers   → output/priority_lists/")
+    print("    • Model charts (4)             → outputs/model_results/")
+    print("    • Priority list for trainers   → outputs/priority_lists/")
     print()
     print("  Key results:")
     print("    • 46,073 learners analysed")

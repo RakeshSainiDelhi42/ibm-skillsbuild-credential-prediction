@@ -32,7 +32,7 @@ except ImportError:
 # ── CONFIG 
 INPUT_FILE    = 'data/combined/learner_level_data.csv'
 MODEL_FOLDER  = 'models/'
-OUTPUT_FOLDER = 'output/model_results/'
+OUTPUT_FOLDER = 'outputs/model_results/'
 
 os.makedirs(MODEL_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)

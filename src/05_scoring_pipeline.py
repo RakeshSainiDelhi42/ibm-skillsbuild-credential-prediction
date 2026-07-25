@@ -18,7 +18,7 @@ CLEANED_FOLDER = 'data/cleaned/*.csv'
 MODEL_PATH     = 'models/best_model.pkl'
 ENCODERS_PATH  = 'models/encoders.pkl'
 FEATURES_PATH  = 'models/feature_names.pkl'
-OUTPUT_FOLDER  = 'output/priority_lists/'
+OUTPUT_FOLDER  = 'outputs/priority_lists/'
 
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
