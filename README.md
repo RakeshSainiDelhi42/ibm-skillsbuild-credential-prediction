@@ -17,6 +17,13 @@ Many learners register on the IBM SkillsBuild platform, but only a fraction comp
 
 This project develops an end-to-end machine learning pipeline that predicts whether a learner will earn an IBM Digital Credential and ranks learners based on their need for follow-up support.
 
+## 🚀 Live Demo
+
+**Try the app here:** [ibm-skillsbuild-credential-prediction-by-rakesh.streamlit.app](https://ibm-skillsbuild-credential-prediction-by-rakesh.streamlit.app/)
+
+Upload the included synthetic sample (`sample_data/sample_transcript.csv`) to see the pipeline generate a ranked outreach priority list — no real data needed.
+
+
 ##  Project Workflow
 
 ```text
