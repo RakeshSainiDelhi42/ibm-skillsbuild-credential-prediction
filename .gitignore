@@ -1,0 +1,27 @@
+# ─── NEVER COMMIT REAL LEARNER DATA ───────────────────────────
+data/
+*.xlsx
+!sample_data/*.csv
+2025_*.csv
+2026_*.csv
+*TranscriptsDetail*.csv
+*CredentialsDetail*.csv
+priority_list_*.xlsx
+
+# ─── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ─── OS / editor ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ─── Streamlit ────────────────────────────────────────────────
+.streamlit/secrets.toml
